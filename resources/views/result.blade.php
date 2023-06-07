@@ -1,0 +1,1 @@
+@yield('cl_content')
