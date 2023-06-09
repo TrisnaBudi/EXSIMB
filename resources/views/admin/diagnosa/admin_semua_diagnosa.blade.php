@@ -19,23 +19,34 @@
                         </thead>
                         <tbody>
                             @foreach ($diagnosa as $item)
-                                <?php $int = 0 ?>
-                                <?php $data_diagnosa = json_decode($item->data_diagnosa, true) ?>
-                                <?php foreach ($data_diagnosa as $val ) {
-                                    if (floatval($val["value"]) > $int) {
-                                        $diagnosa_dipilih["value"] = floatval($val["value"]);
-                                        $diagnosa_dipilih["kode_kerusakan"] = App\Models\Kerusakan::where("kode_kerusakan", $val["kode_kerusakan"])->first();
-                                        $int = floatval($val["value"]);
-                                    }
-                                } ?>
-                                <tr>
-                                    <th scope="row">{{ $loop->iteration }}</th>
-                                    <td>{{ $item->diagnosa_id }}</td>
-                                    <td> {{ $diagnosa_dipilih["kode_kerusakan"]->kode_kerusakan }} | {{ $diagnosa_dipilih["kode_kerusakan"]->kerusakan }}</td>
-                                    <td>{{ ($diagnosa_dipilih["value"] * 100) }} %</td>
-                                    <td><a class="p-2" href="{{ route('spk.result', ["diagnosa_id" => $item->diagnosa_id]) }}">Detail</a></td>
-                                </tr>
-                            @endforeach
+                            <?php
+                            $int = 0;
+                            $data_diagnosa = json_decode($item->data_diagnosa, true);
+                            $diagnosa_dipilih = [
+                                "value" => 0,
+                                "kode_kerusakan" => null
+                            ];
+                        
+                            foreach ($data_diagnosa as $val) {
+                                if (isset($val["value"]) && floatval($val["value"]) > $int) {
+                                    $diagnosa_dipilih["value"] = floatval($val["value"]);
+                                    $diagnosa_dipilih["kode_kerusakan"] = App\Models\Kerusakan::where("kode_kerusakan", $val["kode_kerusakan"])->first();
+                                    $int = floatval($val["value"]);
+                                }
+                            }
+                            ?>
+                            <tr>
+                                <th scope="row">{{ $loop->iteration }}</th>
+                                <td>{{ $item->diagnosa_id }}</td>
+                                <td>
+                                    @if ($diagnosa_dipilih["kode_kerusakan"])
+                                        {{ $diagnosa_dipilih["kode_kerusakan"]->kode_kerusakan }} | {{ $diagnosa_dipilih["kode_kerusakan"]->kerusakan }}
+                                    @endif
+                                </td>
+                                <td>{{ ($diagnosa_dipilih["value"] * 100) }} %</td>
+                                <td><a class="p-2" href="{{ route('spk.result', ["diagnosa_id" => $item->diagnosa_id]) }}">Detail</a></td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -1,5 +1,5 @@
 @extends('admin.admin_main')
-@section('title', 'Dashboard')
+@section('title', 'Add_admin')
 
 {{-- isi --}}
 @section('admin_content')
@@ -19,7 +19,7 @@
         <section class="section dashboard">
             <div class="row">
 
-              <form method="POST" action="{{ route('register') }}">
+              <form method="POST" action="{{ route('admin.store') }}">
                 @csrf
 
                 <div class="row mb-3">

@@ -84,15 +84,15 @@ class DiagnosaController extends Controller
     public function forwardChaining($kodeGejala, $kerusakan)
     {
         $diagnosa = [];
-
+    
         foreach ($kerusakan as $kerusakan) {
             $gejalaKerusakan = Keputusan::whereIn("kode_gejala", $kodeGejala)
                 ->where("kode_kerusakan", $kerusakan->kode_kerusakan)
                 ->get();
-
+    
             if (count($gejalaKerusakan) > 0) {
                 $fc = $this->calculateFC($gejalaKerusakan);
-
+    
                 $diagnosa[] = [
                     'kode_kerusakan' => $kerusakan->kode_kerusakan,
                     'nama_kerusakan' => $kerusakan->nama_kerusakan,
@@ -100,9 +100,10 @@ class DiagnosaController extends Controller
                 ];
             }
         }
-
+    
         return $diagnosa;
     }
+    
 
     public function calculateFC($gejalaKerusakan)
     {
@@ -164,13 +165,13 @@ class DiagnosaController extends Controller
         $diagnosa = Diagnosa::where('diagnosa_id', $diagnosa_id)->first();
         $gejala = json_decode($diagnosa->kondisi, true);
         $data_diagnosa = json_decode($diagnosa->data_diagnosa, true);
-
+    
         $diagnosa_dipilih = [];
         $int = 0.0;
-
+    
         foreach ($data_diagnosa as $val) {
             if (floatval($val["fc"]) > $int) {
-                $diagnosa_dipilih["value"] = floatval($val["fc"]);
+                $diagnosa_dipilih["fc"] = floatval($val["fc"]);
                 $diagnosa_dipilih["kode_kerusakan"] = Kerusakan::where("kode_kerusakan", $val["kode_kerusakan"])->first();
                 $int = floatval($val["fc"]);
             }

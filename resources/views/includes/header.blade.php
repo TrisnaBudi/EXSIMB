@@ -9,11 +9,17 @@
                 <div class="logo"></div>
             </a>
             <ul>
+                @auth
                 <li>
                     <a class="shadow-hover" href="/dashboard">Dashboard</a>
                 </li>
+                @endauth
+
                 <li>
-                    <a class="shadow-hover curent-shadow" href="#">Menu</a>
+                    <a class="shadow-hover" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="shadow-hover " href="#">Menu</a>
                     <ul>
                         <li><a href="/form-faq">Diagnosa</a></li>
                         <li><a href="/gejala">Gejala</a></li>
@@ -32,3 +38,5 @@
             </ul>
         </div>
     </nav>
+
+    
