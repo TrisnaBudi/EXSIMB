@@ -12,7 +12,7 @@
         <div class="page-intro">
           <div class="gf_browser_safari gform_wrapper gform_legacy_markup_wrapper" id="gform_wrapper_1" style="display:none;">
             <div class="gform_heading">
-              <h3 class="gform_title">Tes Kerusakan</h3>
+              <h3 class="gform_title">Diagnosa Kerusakan</h3>
               <span class="gform_description"></span>
             </div>
             <form method="post" enctype="multipart/form-data" id="gform_1" action="{{ route('spk.store') }}" novalidate>
@@ -27,7 +27,7 @@
                   <div class="gform_page_fields">
                     <ul id="gform_fields_1" class="gform_fields top_label form_sublabel_below description_above">
                       <li id="field_1_4" class="gfield gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below field_description_above gfield_visibility_visible" data-js-reload="field_1_4">
-                        <p><strong>Dalam 2 minggu terakhir</strong>, seberapa sering masalah-masalah berikut ini mengganggu kamu?</p>
+                        <p><strong>Apa saja gejala yang anda alami ?</strong></p>
                         <p>Tidak semua field harus diisi, jadi pastikan untuk memberikan jawaban yang tepat sesuai dengan pengalamanmu.</p>
                       </li>
                       <li id="field_1_38" class="gfield gform_hidden field_sublabel_below field_description_above gfield_visibility_visible" data-js-reload="field_1_38">

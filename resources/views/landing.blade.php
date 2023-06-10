@@ -3,7 +3,7 @@
     <main>
         <!-- Hero Section -->
         <div class="section full-height mob-height">
-            <div class="background-parallax" style="background-image: url('landing/img/full-2.jpg')" data-enllax-ratio=".5"
+            <div class="background-parallax" style="background-image: url('{{ asset('landing/img/full-2.jpg') }}') " data-enllax-ratio=".5"
                 data-enllax-type="background" data-enllax-direction="vertical"></div>
             <div class="hero-center-text-wrap">
                 <div class="container text-left">
@@ -11,19 +11,12 @@
                         <div class="col-md-12">
                             <br>
                             <br>
-                            <h1 class="parallax-fade-top-2 typed">Cek Kerusakan <strong>Sepedamu</strong> Sekarang!<br><span
-                                    id="typed-1"></span></h1>
+                            <h1 class="parallax-fade-top-2 typed">Cek Kerusakan <strong>Sepedamu</strong> Sekarang!<br>
+                                <span id="typed-1"></span></h1>
                             <br>
-                            <style>
-                                .btn-glow:hover {
-                                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-                                    transition: box-shadow 0.5s;
-                                }
-
-                            </style>
                             <div style="margin-left: 12px">
                                 <a href="/form-faq" class="btn btn-dark btn-glow" role="button"
-                                    style="color: rgb(218, 116, 22);">Isi form</a>
+                                    style="color: rgb(255, 255, 255)">Diagnosa Sekarang!</a>
                             </div>
                         </div>
                     </div>

@@ -102,6 +102,11 @@
         footer{
             color: white;
         }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: box-shadow 0.5s;
+        }
 		
 	</style>
 </head>

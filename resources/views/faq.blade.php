@@ -8,8 +8,8 @@
       <div class="wrap medium">
         <div class="page-intro">
           <div class="gf_browser_safari gform_wrapper gform_legacy_markup_wrapper" id="gform_wrapper_1" style="">
-            <form method="post" enctype="multipart/form-data" id="gform_1" action="http://exsimb.test/spk" novalidate="">
-              <input type="hidden" name="_token" value="no316P6C0uuyXCP5Bq27uqdjpEwPSOCvKn4XyRKV">
+            <form method="post" enctype="multipart/form-data" id="gform_1" action="{{ route('spk.store') }}" novalidate="">
+              @csrf
               <ol class="screen-progress-bar clearfix step-1-of-3">
                 <li class="step-1"><span>Informasi<br>Tes</span></li>
                 <li class="step-2"><span>Pertanyaan<br>Tes</span></li>
@@ -26,56 +26,60 @@
                             <div class="card-header" id="headingOne">
                               <h2 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  Apa itu kerusakanCheck?
+                                  Apa itu EXSIMB?
                                 </button>
                               </h2>
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
                               <div class="card-body">
-                                kerusakanCheck adalah sebuah situs yang membantu mahasiswa akhir mengukur tingkat kerusakan mereka dengan mengisi formulir pertanyaan. Kami menyediakan solusi sesuai setelah mahasiswa mengisi formulir tersebut.
-                              </div>
+                                EXSIMB adalah sebuah situs yang membantu para rider untuk mendiagnosis kerusakan sepeda dengan
+                                mengisi formulir pertanyaan. Kami juga menyediakan solusi sesuai formulir tersebut.
+                            </div>
                             </div>
                           </div>
                           <div class="card">
                             <div class="card-header" id="headingTwo">
                               <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  Siapa yang bisa mengakses kerusakanCheck?
+                                  Siapa yang bisa mengakses EXSIMB?
                                 </button>
                               </h2>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
                               <div class="card-body">
-                                kerusakanCheck ditujukan untuk mahasiswa akhir, namun siapa saja dapat mengakses situs ini dan mengisi formulir untuk mengetahui tingkat kerusakan mereka.
-                              </div>
+                                EXSIMB ditujukan untuk para rider pemilik sepeda gunung, namun siapa saja dapat mengakses situs ini dan mengisi
+                                formulir.
+                            </div>
                             </div>
                           </div>
                           <div class="card">
                             <div class="card-header" id="headingThree">
                               <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  Apakah hasil dari kerusakanCheck dapat diandalkan?
+                                  Apakah hasil dari EXSIMB dapat diandalkan?
                                 </button>
                               </h2>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
                               <div class="card-body">
-                                Hasil dari kerusakanCheck adalah sebuah estimasi dari tingkat kerusakan seseorang, dan tidak bisa dianggap sebagai diagnosis yang pasti. Kami sangat menyarankan agar seseorang yang merasa memiliki tingkat kerusakan yang tinggi untuk segera meminta bantuan profesional.
-                              </div>
+                                Hasil dari EXSIMB adalah sebuah kemungkinan, dan tidak bisa dianggap
+                                sebagai diagnosis yang pasti. Kami sangat menyarankan agar rider tetap mendatangi teknisi apabila tidak mampu memperbaiki.
+                            </div>
                             </div>
                           </div>
                           <div class="card">
                             <div class="card-header" id="headingFour">
                               <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                  Bagaimana cara mengakses solusi yang ditawarkan kerusakanCheck?
+                                  Bagaimana cara mengakses solusi yang ditawarkan EXSIMB?
                                 </button>
                               </h2>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faqAccordion">
                               <div class="card-body">
-                                Setelah mengisi formulir, mahasiswa akan menerima rekomendasi solusi sesuai dengan tingkat kerusakan yang terdeteksi. Kami juga menyediakan tautan ke sumber informasi dan bantuan profesional yang dapat membantu mahasiswa mengatasi kerusakan mereka.
-                              </div>
+                                Setelah mengisi formulir, rider akan menerima rekomendasi solusi sesuai dengan kerusakan yang
+                                terdeteksi.
+                            </div>
                             </div>
                           </div>
                         </div>
