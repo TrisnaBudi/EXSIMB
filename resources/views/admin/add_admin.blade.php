@@ -4,13 +4,15 @@
 {{-- isi --}}
 @section('admin_content')
     <!-- Page content-->
-    <main id="main" class="main">
+    <main id="main" class="main" style="margin-left: 0">
 
         <div class="pagetitle">
-            <h1>Dashboard</h1>
+            <h1>Tambah Admin</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+                    <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Admin</li>
+                    <li class="breadcrumb-item active"><a href="{{ route('admin.list_admin') }}">Daftar Admin</a></li>
                     <li class="breadcrumb-item active">Tambah Admin</li>
                 </ol>
             </nav>

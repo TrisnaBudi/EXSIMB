@@ -62,7 +62,7 @@ background-color: #2980b9;
 
   <div class="login-card animate__animated animate__fadeInDown">
     <div style="text-align: center;">
-      <img src="landing/img/logo-dark.png" alt="Logo">
+      <img src="landing/img/logo.png" style="max-width: 200px" alt="Logo">
     </div>
     <br>
     <br>

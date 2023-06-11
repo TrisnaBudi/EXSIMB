@@ -43,6 +43,23 @@ attr: null
 });
 </script>
 
+<script>
+	// Type text
+	
+	var typed = new Typed('#typed-2', {
+	strings: ['About Us', 'Tentang kami'],
+	typeSpeed: 45,
+	backSpeed: 0,
+	startDelay: 200,
+	backDelay: 2200,
+	loop: true,
+	loopCount: false,
+	showCursor: true,
+	cursorChar: "_",
+	attr: null
+	});
+	</script>
+
 <script src='kerusakan-assets/wp-includes/js/dist/vendor/regenerator-runtime.min3937.js?ver=0.13.9'
 		id='regenerator-runtime-js'></script>
 	<script src='kerusakan-assets/wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0' id='wp-polyfill-js'></script>

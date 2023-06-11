@@ -71,37 +71,6 @@
             </div>
         </div>
 
-        <div class="section py-2">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-5 text-center mb-3">
-                        <h4>Developer</h4>
-                        <p class="lead">EXSIMB</p>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 text-center">
-                        <div class="text-center">
-                            <img src="landing/img/team2.jpg" alt="" class="rounded" style="max-width: 300px;">
-                            <p>Mahasiswa Tingkat Akhir</p>
-                            <h6>Trisna Budi Wicaksana</h6>
-                            <div class="social-team">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section py-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="full-line"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- FAQ Section -->
         <section id="faq" class="bg-light py-5">

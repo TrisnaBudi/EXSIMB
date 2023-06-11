@@ -22,12 +22,12 @@
                     <a class="shadow-hover " href="#">Menu</a>
                     <ul>
                         <li><a href="/form-faq">Diagnosa</a></li>
-                        <li><a href="/gejala">Gejala</a></li>
+                        <li><a href="/gejala">Informasi Perawatan</a></li>
                         <li><a href="/kerusakan">Depresi</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a class="shadow-hover" href="#kontak">Kontak</a>
+                    <a class="shadow-hover" href="/aboutus">About Us</a>
                 </li>
 
                 @guest()

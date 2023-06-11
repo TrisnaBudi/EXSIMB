@@ -17,7 +17,10 @@ use Illuminate\Support\Facades\Route;
         return view('landing');
     });
 
-
+    Route::get('/aboutus', function () {
+        return view('aboutus');
+    });
+    
 Route::middleware('auth')->group(function () {
     Route::prefix('/dashboard')->group(function () {
         Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
@@ -46,32 +49,35 @@ Route::middleware('auth')->group(function () {
             return redirect('/dashboard');
         });
 
+        
     Route::resource('/gejala', GejalaController::class); // CRUD Gejala
     Route::resource('/kerusakan', KerusakanController::class); // CRUD Kerusakan
-    Route::resource('/spk', DiagnosaController::class)->only('index'); // Menampilkan halaman diagnosa
+    Route::resource('/spk', DiagnosaController::class)->only('index');
 
     Route::get('/spk/result/{diagnosa_id}', [DiagnosaController::class, 'diagnosaResult'])->name('spk.result'); // Menampilkan hasil diagnosa
-})->name('admin.dashboard');
+    })->name('admin.dashboard');
 
-Route::get('/form', function () {
-    $data = [
-        'gejala' => Gejala::all(),
-        'kondisi_user' => KondisiUser::all()
-    ];
-    return view('form', $data);
-});
+    Route::get('/form', function () {
+        $data = [
+            'gejala' => Gejala::all(),
+            'kondisi_user' => KondisiUser::all()
+        ];
+        return view('form', $data);
+    });
 
-Route::get('/form-faq', function () {
-    $data = [
-        'gejala' => Gejala::all(),
-        'kondisi_user' => KondisiUser::all()
-    ];
-    return view('faq', $data);
-})->name('cl.form'); // Menampilkan form FAQ
+    Route::get('/form-faq', function () {
+        $data = [
+            'gejala' => Gejala::all(),
+            'kondisi_user' => KondisiUser::all()
+        ];
+        return view('faq', $data);
+    })->name('cl.form'); // Menampilkan form FAQ
 
-Route::resource('/spk', DiagnosaController::class); // CRUD Diagnosa
-Route::get('/spk/result/{diagnosa_id}', [DiagnosaController::class, 'diagnosaResult'])->name('spk.result'); // Menampilkan hasil diagnosa
+  
 
-Auth::routes();
+    Route::resource('/spk', DiagnosaController::class); // CRUD Diagnosa
+    Route::get('/spk/result/{diagnosa_id}', [DiagnosaController::class, 'diagnosaResult'])->name('spk.result'); // Menampilkan hasil diagnosa
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Auth::routes();
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

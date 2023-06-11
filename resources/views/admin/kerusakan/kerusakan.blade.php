@@ -4,6 +4,15 @@
 {{-- isi --}}
 @section('admin_content')
     <!-- Page content-->
+    <div class="pagetitle mt-2">
+        <h1>Kerusakan</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active"> Kerusakan</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
     <div class="container text-center mt-lg-5 p-lg-5">
         <div class="row">
           <div class="col-lg-8 justify-content-center mx-auto">
