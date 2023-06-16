@@ -5,12 +5,15 @@ use App\Http\Controllers\GejalaController;
 use App\Http\Controllers\KerusakanController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\PerawatanController;
 use App\Models\Diagnosa;
 use App\Models\Kerusakan;
 use App\Models\KondisiUser;
 use App\Models\Gejala;
-use App\Models\User;
+use App\Models\Perawatan;
 use Illuminate\Support\Facades\Route;
+
+
 
 
     Route::get('/', function () {
@@ -20,7 +23,11 @@ use Illuminate\Support\Facades\Route;
     Route::get('/aboutus', function () {
         return view('aboutus');
     });
-    
+ 
+    Route::get('/perawatan', [PerawatanController::class, 'index'])->name('perawatan');
+    Route::get('/perawatan/{id}', [PerawatanController::class, 'show'])->name('perawatan.show');
+
+
 Route::middleware('auth')->group(function () {
     Route::prefix('/dashboard')->group(function () {
         Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');

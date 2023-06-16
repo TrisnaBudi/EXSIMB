@@ -87,7 +87,8 @@
                     </section>
                   </div>
                   <div class="gform_page_footer top_label">
-                    <a href="/form" class="gform_next_button button">Next</a>
+                    <a style="align-content: flex-end" href="/" class="gform_back_button button"> BACK</a>
+                    <a style="align-content: flex-start" href="/form" class="gform_next_button button"> NEXT</a>
                   </div>
                 </div>
               </div>

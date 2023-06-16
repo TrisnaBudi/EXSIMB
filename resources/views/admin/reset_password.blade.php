@@ -18,22 +18,22 @@
 
         <section class="section dashboard">
             <div class="row">
-                <div class="container col-md-6 justify-content-right">
+                <div class="container col-md-6 justify-content-right border border-4 rounded">
                     <form action="{{ route('admin.update', $user->id) }}" method="POST">
                         @csrf
                         @method('PUT')
 
-                        <div class="form-group">
+                        <div class="form-group my-2 ">
                             <label for="password">New Password</label>
-                            <input type="password" name="password" id="password" class="form-control" required>
+                            <input type="password" name="password" id="password" class="form-control border border-4 rounded" required>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group my-2 ">
                             <label for="password_confirmation">Confirm New Password</label>
-                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
+                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control border border-4 rounded" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Reset Password</button>
+                        <button type="submit" class="btn btn-primary my-4">Reset Password</button>
                     </form>
                 </div>
             </div>

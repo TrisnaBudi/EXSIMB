@@ -20,12 +20,39 @@
 
 <!-- JAVASCRIPT
 ================================================== -->
-<script src="landing/js/jquery.js"></script>
-<script src="landing/js/royal_preloader.min.js"></script>
-<script src="landing/js/popper.min.js"></script>
-<script src="landing/js/bootstrap.min.js"></script>
-<script src="landing/js/plugins.js"></script>
-<script src="landing/js/custom.js"></script>
+<!-- Menambahkan link JavaScript Bootstrap dan jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Menambahkan script untuk menginisialisasi dropdown -->
+<script>
+    $(document).ready(function () {
+        // Initialize Bootstrap dropdown
+        $('.dropdown-toggle').on('click', function (e) {
+            e.stopPropagation();
+            var $this = $(this);
+            var $dropdownMenu = $this.next('.dropdown-menu');
+            
+            // Close other open dropdown menus
+            $('.dropdown-menu').not($dropdownMenu).removeClass('show');
+            
+            // Toggle the current dropdown menu
+            $dropdownMenu.toggleClass('show');
+        });
+        
+        $(document).on('click', function (e) {
+            if ($(e.target).closest('.dropdown-toggle').length === 0 && $(e.target).closest('.dropdown-menu').length === 0) {
+                $('.dropdown-menu').removeClass('show');
+            }
+        });
+    });
+</script>
+<script src="{{asset('landing/js/jquery.js')}}"></script>
+<script src="{{asset('landing/js/popper.min.js')}}"></script>
+<script src="{{asset('landing/js/royal_preloader.min.js')}}"></script>
+<script src="{{asset('landing/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('landing/js/plugins.js')}}"></script>
+<script src="{{asset('landing/js/custom.js')}}"></script>
 <script>
 // Type text
 
@@ -43,7 +70,7 @@ attr: null
 });
 </script>
 
-<script>
+	<script>
 	// Type text
 	
 	var typed = new Typed('#typed-2', {
@@ -59,6 +86,22 @@ attr: null
 	attr: null
 	});
 	</script>
+	<script>
+		// Type text
+		
+		var typed = new Typed('#typed-3', {
+		strings: ['Maintenance Info', 'Info Perawatan'],
+		typeSpeed: 45,
+		backSpeed: 0,
+		startDelay: 200,
+		backDelay: 2200,
+		loop: true,
+		loopCount: false,
+		showCursor: true,
+		cursorChar: "_",
+		attr: null
+		});
+		</script>
 
 <script src='kerusakan-assets/wp-includes/js/dist/vendor/regenerator-runtime.min3937.js?ver=0.13.9'
 		id='regenerator-runtime-js'></script>
@@ -70,8 +113,7 @@ attr: null
 	<script src='kerusakan-assets/wp-includes/js/dist/a11y.min65c7.js?ver=ecce20f002eda4c19664' id='wp-a11y-js'></script>
 	<script defer='defer' src='kerusakan-assets/wp-content/plugins/gravityforms/js/placeholders.jquery.min91ac.js?ver=2.6.8'
 		id='gform_placeholder-js'></script>
-	<script defer='defer' src='kerusakan-assets/google/www.google.com/recaptcha/apieee6.js?hl=en&amp;ver=6.1.1#038;render=explicit'
-		id='gform_recaptcha-js'></script>
+
 	<script>document.addEventListener('facetwp-refresh', function () {
 			if (FWP.facets.hasOwnProperty('location_search') && FWP.facets['location_search'].length > 0) {
 				FWP.facets['area_served'] = [];

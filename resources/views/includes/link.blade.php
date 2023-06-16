@@ -28,26 +28,22 @@
         rel="stylesheet" />
 
     <!-- CSS
- ================================================== -->
-    <link rel="stylesheet" href="landing/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="landing/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="landing/css/style.css" />
-    <link rel="stylesheet" href="landing/css/colors/color.css" />
-    <link rel="stylesheet" href="landing/css/ionicons.min.css" />
-    <link rel="stylesheet" href="landing/css/owl.carousel.css" />
-    <link rel="stylesheet" href="landing/css/owl.transitions.css" />
+    ================================================== -->
+    <link rel="stylesheet" href="{{asset('landing/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('landing/css/font-awesome.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('landing/css/style.css')}}" />
+    <link rel="stylesheet" href="{{asset('landing/css/colors/color.css')}}" />
+    <link rel="stylesheet" href="{{asset('landing/css/ionicons.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('landing/css/owl.carousel.css')}}" />
+    <link rel="stylesheet" href="{{asset('landing/css/owl.transitions.css')}}" />
 
-	
+
+
+<!-- JS -->
 
     <!-- Favicons
  ================================================== -->
     <link rel="icon" type="image/png" href="kerusakan-assets/favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="kerusakan-assets/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="kerusakan-assets/apple-touch-icon-114x114.png">
-	
-
-	
 
 	<script defer='defer' src='kerusakan-assets/wp-content/plugins/gravityforms/js/jquery.json.min91ac.js?ver=2.6.8'
 	id='gform_json-js'></script>
@@ -107,6 +103,203 @@
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             transition: box-shadow 0.5s;
         }
+
+
+
+        /* Portfolio */
+
+        .portfolio {
+        padding-bottom: 100px;
+        }
+
+        .portfolio .btn:focus,
+        .portfolio .btn:hover,
+        .portfolio .btn.focus.active {
+        box-shadow: none!important;
+        outline: 0!important;
+        }
+
+        .portfolio .btn-group .btn {
+        border-radius: 0px!important;
+        padding-left: 0px;
+        font-weight: 700;
+        }
+
+        .portfolio .btn-group .btn:hover {
+        color: $primary-color;
+        }
+
+        .portfolio .btn-group:not(:first-child) > .btn,
+        .portfolio .btn-group > .btn:not(:first-child) {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        }
+
+        .portfolio .btn.active {
+        color: $primary-color;
+        }
+
+        .inner-box {
+        position: relative;
+        }
+
+        .inner-box .image {
+        position: relative;
+        overflow: hidden;
+        }
+
+        .inner-box .image img {
+        position: relative;
+        width: 100%;
+        display: block;
+        -ms-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        }
+
+        .inner-box .image .overlay-box {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        top: 0px;
+        z-index: 2;
+        opacity: 0;
+        display: block;
+        -webkit-transition: all .6s ease;
+        -ms-transition: all .6s ease;
+        -o-transition: all .6s ease;
+        transition: all .6s ease;
+        overflow: hidden;
+        }
+
+        .inner-box .image .overlay-box:before {
+        position: absolute;
+        content: '';
+        left: -450px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0; 
+        -ms-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
+        background-color: rgba(47, 50, 56, .8);
+        }
+
+        .inner-box:hover .image img {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        }
+
+        .inner-box:hover .image .overlay-box:before {
+        opacity: 1;
+        left: 0px;
+        }
+
+        .inner-box:hover .image .overlay-box {
+        opacity: 1;
+        }
+
+        .inner-box:hover .image .overlay-box .overlay-content h5 {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
+        }
+
+        .inner-box:hover .image .overlay-box .overlay-content p {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
+        }
+
+        .inner-box .image .overlay-box .overlay-inner {
+        position: absolute;
+        left: 0px;
+        bottom: 30px;
+        z-index: 1;
+        padding: 10px 40px;
+        }
+
+        .inner-box .image .overlay-box .overlay-inner .overlay-content {
+        i {
+            font-size: 28px;
+        }
+        }
+
+        .inner-box .image h3 {
+        color: $white;
+        }
+
+        .overlay-content h5 {
+        text-transform: capitalize;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 0px 8px;
+        margin-bottom: 0px;
+        -webkit-transform: translateX(-150px);
+        -moz-transform: translateX(-150px);
+        -ms-transform: translateX(-150px);
+        -o-transform: translateX(-150px);
+        transform: translateX(-150px);
+        -ms-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        }
+
+        .overlay-content p {
+        font-size: 14px;
+        margin-bottom: 0px;
+        padding: 0px 8px;
+        margin-top: 2px;
+        text-transform: capitalize;
+        background: rgba(255, 255, 255, 0.9);
+        color: #2f3238;
+        -webkit-transform: translateX(-150px);
+        -moz-transform: translateX(-150px);
+        -ms-transform: translateX(-150px);
+        -o-transform: translateX(-150px);
+        transform: translateX(-150px);
+        -ms-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        }
+
+        .portfolio-image {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        text-align: center;
+        background: $black;
+        color: $white;
+        padding-top: 16px;
+        position: absolute;
+        top: 40%;
+        font-size: 22px;
+        margin-left: -28px;
+        left: 50%;
+        }
+
+        /* Portfolio Single */
+
+        .info a {
+        margin-right: 10px;
+        }
+
 		
 	</style>
-</head>

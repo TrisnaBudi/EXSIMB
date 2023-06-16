@@ -32,7 +32,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-5 text-center">
                         <div class="text-center" >
-                            <img class="border border-secondary rounded" src="{{ asset('landing/img/dev.jpg') }}" alt="" style="max-width: 300px;">
+                            <img class="border border-secondary" src="{{ asset('landing/img/dev.jpg') }}" alt="" style="max-width: 300px; border-radius: 40px;">
                             <h4 class="py-2" style="color: white">Mahasiswa Tingkat Akhir <br> Politeknik TEDC Bandung</h4>
                             <h6 style="color: white">Trisna Budi Wicaksana</h6>
                         </div>

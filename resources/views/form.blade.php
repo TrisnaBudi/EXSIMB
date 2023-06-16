@@ -85,6 +85,7 @@
                       @endforeach
 
                       <div class="gform_page_footer top_label">
+                        <a style="align-content: flex-end" href="/form" class="gform_back_button button"> BACK</a>
                         <button type="submit" class="gform_next_button button">Submit</button>
                       </div>
                     </ul>
