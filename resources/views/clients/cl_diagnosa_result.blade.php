@@ -111,14 +111,17 @@
             <div class="col-md-10 mx-auto">
                 <div class="card my-4">
                     <div class="card-header">
-                        Hasil
+                        <h5>Hasil</h5>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">
                             {{ $diagnosa_dipilih["kode_kerusakan"]->kode_kerusakan }} | {{ $diagnosa_dipilih["kode_kerusakan"]->kerusakan }}
                         </h5>
                         <p class="card-text">Jadi dapat disimpulkan bahwa pasien mengalami kerusakan dengan tingkat kepastian yaitu <span class="fw-semibold fs-4">{{ round(($hasil["value"] * 100), 2) }}</span> %</p>
-                    </div>
+                    
+                        <h5 class="card-title">Solusi:</h5>
+                        <p>{{ $diagnosa_dipilih["kode_kerusakan"]->solusi }}</p>
+                    </div>                    
                 </div>
             </div>
         </div>

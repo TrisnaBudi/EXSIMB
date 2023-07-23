@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->char('kode_kerusakan');
             $table->string('kerusakan');
+            $table->text('solusi');
             $table->timestamps();
         });
     }
