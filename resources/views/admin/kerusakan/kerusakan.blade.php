@@ -39,6 +39,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Kode Kerusakan</th>
                     <th scope="col">Kerusakan</th>
+                    <th scope="col">Solusi</th> <!-- Kolom Solusi ditambahkan di sini -->
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -48,9 +49,10 @@
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{$item->kode_kerusakan}}</td>
                             <td>{{$item->kerusakan}}</td>
+                            <td>{{$item->solusi}}</td> <!-- Menampilkan data solusi di sini -->
                             <td>
                                 <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="updateInput('{{ $item->id }}',
-                                '{{$item->kode_kerusakan}}', '{{$item->kerusakan}}'), actionUbahkerusakan('{{ route('kerusakan.update', $item->id) }}')">
+                                '{{$item->kode_kerusakan}}', '{{$item->kerusakan}}', '{{$item->solusi}}'), actionUbahkerusakan('{{ route('kerusakan.update', $item->id) }}')">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
                                 <form action="{{ route('kerusakan.destroy', $item) }}" class="d-inline" method="POST">
@@ -72,3 +74,4 @@
     </div>
 
 @endsection
+
