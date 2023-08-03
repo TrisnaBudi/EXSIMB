@@ -6,6 +6,24 @@
     <!-- Page content-->
     <main id="main" class="main" style="margin-left: 0">
 
+         <!-- Display success message -->
+         @if(Session::has('success'))
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+             {{ Session::get('success') }}
+         </div>
+     @endif
+
+     <!-- Display error messages -->
+     @if($errors->any())
+         <div class="alert alert-danger alert-dismissible fade show" role="alert">
+             <ul>
+                 @foreach ($errors->all() as $error)
+                     <li>{{ $error }}</li>
+                 @endforeach
+             </ul>
+         </div>
+     @endif
+
         <div class="pagetitle">
             <h1>Reset Password</h1>
             <nav>

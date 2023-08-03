@@ -18,8 +18,8 @@ class KondisiUser extends Model
                 'nilai' => 1,
             ],
             [
-                'kondisi' => 'Tidak',
-                'nilai' => 0.0,
+                'kondisi' => 'Kurang Yakin',
+                'nilai' => 0.5,
             ],
         ];
         return $cf_user;

@@ -10,6 +10,8 @@ use App\Models\KondisiUser;
 use App\Models\Kerusakan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Routing\Controller;
 
 class AdminController extends Controller
@@ -63,31 +65,29 @@ class AdminController extends Controller
         return view('admin.reset_password', compact('user'));
     }
     
-    
-
     public function update(Request $request, $id)
     {
+        $user = User::findOrFail($id);
+
         // Validate the request data
         $validatedData = $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . $id,
-            'password' => 'nullable|min:6',
+            'password' => 'required|min:6|confirmed',
         ]);
 
-        // Find the user
-        $user = User::findOrFail($id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        
-        // Update the password if provided
-        if ($request->password) {
-            $user->password = bcrypt($request->password);
-        }
-
+        // Update the user's password
+        $user->password = Hash::make($request->password);
         $user->save();
 
-        return redirect()->route('admin.list_admin')->with('success', 'Admin updated successfully');
+        // Show a success message
+        return redirect()->route('admin.edit', $user->id)->with('success', 'Password updated successfully');
     }
+
+    // Handle validation errors
+    protected function failedValidation(Validator $validator)
+    {
+        throw new ValidationException($validator, redirect()->back()->withInput()->withErrors($validator));
+    }
+
 
     public function destroy($id)
     {

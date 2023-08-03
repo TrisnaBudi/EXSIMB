@@ -34,7 +34,14 @@
                     <span class="ms-1 d-none d-sm-inline">Diagnosa</span>
                 </a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+                <a class="nav-link px-sm-0 px-2" href="{{ route('admin.list_admin') }}">
+                    <i class="bi bi-people nav-icon"></i>
+                    <span class="ms-1 d-none d-sm-inline">Admin</span>
+                </a>
+            </li>
+
+            {{-- <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle px-sm-0 px-1" role="button" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="bi bi-people nav-icon"></i>
                     <span class="ms-1 d-none d-sm-inline">Admin</span>
@@ -47,7 +54,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
         <div class="nav-item dropdown py-sm-4 ms-auto ms-sm-0 flex-shrink-1">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" role="button" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,12 +62,12 @@
                 <span class="d-none d-sm-inline mx-1">Admin</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-end" aria-labelledby="dropdownUser1">
-                <li>
+                {{-- <li>
                     <a class="dropdown-item" href="{{ route('admin.edit', ['id' => auth()->id()]) }}">
                         <i class="bi bi-gear"></i>
                         <span>Ubah Password</span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                         @csrf

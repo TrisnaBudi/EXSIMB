@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="row mx-auto my-4">
-            <div class="col-lg-10 mx-auto">
+            <div class="col-lg-12 mx-auto">
 
                 <div class="table-responsive">
                     <table class="table table-hover">
@@ -108,7 +108,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-10 mx-auto">
+            <div class="col-md-12 mx-auto">
                 <div class="card my-4">
                     <div class="card-header">
                         <h5>Hasil</h5>

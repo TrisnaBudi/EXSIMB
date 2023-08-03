@@ -23,7 +23,7 @@
                     <ul>
                         <li><a href="/form-faq">Diagnosa</a></li>
                         <li><a href="/perawatan">Informasi Perawatan</a></li>
-                        <li><a href="/kerusakan">Depresi</a></li>
+                        {{-- <li><a href="/kerusakan">Depresi</a></li> --}}
                     </ul>
                 </li>
                 <li>

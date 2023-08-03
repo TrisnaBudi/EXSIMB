@@ -73,9 +73,9 @@ background-color: #2980b9;
       @csrf
 
       <div class="form-group">
-          <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
+          <label for="email" class="col-md-4 col-form-label text-md-end ">{{ __('Email') }}</label>
 
-          <div class="form-group">
+          <div class="form-group d-flex">
               <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Masukkan email">
 
               @error('email')
@@ -87,10 +87,10 @@ background-color: #2980b9;
       </div>
       
 
-      <div class="form-group">
+      <div class="form-group ">
           <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
-          <div class="form-group" style="white-space: nowrap">
+          <div class="form-group d-flex" style="white-space: nowrap">
               <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
 
               @error('password')
