@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#212121" />
     <meta name="msapplication-navbutton-color" content="#212121" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#212121" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Web Fonts
  ================================================== -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"

@@ -19,12 +19,12 @@
                     <a class="shadow-hover" href="/">Home</a>
                 </li>
                 <li>
-                    <a class="shadow-hover " href="#">Menu</a>
-                    <ul>
+                    <a class="shadow-hover " href="/perawatan">Informasi Perawatan</a>
+                    {{-- <ul>
                         <li><a href="/form-faq">Diagnosa</a></li>
                         <li><a href="/perawatan">Informasi Perawatan</a></li>
-                        {{-- <li><a href="/kerusakan">Depresi</a></li> --}}
-                    </ul>
+                        <li><a href="/kerusakan">Depresi</a></li>
+                    </ul> --}}
                 </li>
                 <li>
                     <a class="shadow-hover" href="/aboutus">About Us</a>
