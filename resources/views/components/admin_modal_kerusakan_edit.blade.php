@@ -25,7 +25,7 @@
                         </div>
                         <!-- Tambahkan input untuk mengisi solusi -->
                         <div class="form-floating mb-3 p-2 mx-2">
-                            <textarea class="form-control" id="solusi" name="solusi"></textarea>
+                            <textarea type="text" class="form-control" id="solusi" name="solusi"></textarea>
                             <label for="solusi">Solusi</label>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                         </div>
                         <!-- Tambahkan input untuk mengisi solusi -->
                         <div class="form-floating mb-3 p-2 mx-2">
-                            <textarea class="form-control" id="solusi" name="solusi"></textarea>
+                            <textarea type="text" class="form-control" id="solusi" name="solusi"></textarea>
                             <label for="solusi">Solusi</label>
                         </div>
                     </div>

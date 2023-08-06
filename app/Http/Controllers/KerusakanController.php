@@ -40,8 +40,9 @@ class KerusakanController extends Controller
     {
         $valid = $request->validate([
             'kode_kerusakan' => 'required|unique:kerusakan,kode_kerusakan',
-            'kerusakan' => 'required'
-        ]);
+            'kerusakan' => 'required',
+            'solusi' => 'required'
+        ]);        
         Kerusakan::create($valid);
         return redirect()->route('kerusakan.index')->with('pesan', '<div class="alert alert-success p-3 mt-3" role="alert">
         Daftar kerusakan telah ditambahkan

@@ -10,6 +10,7 @@ class Keputusan extends Model
     use HasFactory;
     protected $table = 'keputusan';
     protected $guard = ["id"];
+    protected $fillable = ['kode_gejala', 'kode_kerusakan', 'mb', 'md'];
 
     public function kerusakan()
     {

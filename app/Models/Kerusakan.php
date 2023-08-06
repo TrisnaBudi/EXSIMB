@@ -10,7 +10,7 @@ class Kerusakan extends Model
     use HasFactory;
     protected $table = 'kerusakan';
     protected $guard = ["id"];
-    protected $fillable = ['kode_kerusakan', 'kerusakan'];
+    protected $fillable = ['kode_kerusakan', 'kerusakan','solusi'];
 
     public function fillTable()
     {

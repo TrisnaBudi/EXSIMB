@@ -36,7 +36,7 @@
             <table id="tabel-gejala" class="table table-bordered table-hover my-2">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Kode Gejala</th>
                     <th scope="col">Gejala</th>
                     <th scope="col">Aksi</th>
@@ -45,7 +45,7 @@
                 <tbody>
                     @foreach ($gejala as $item)
                         <tr>
-                            <th scope="row">{{ $loop->iteration + $gejala->firstItem() -1 }}</th>
+                            <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{$item->kode_gejala}}</td>
                             <td>{{$item->gejala}}</td>
                             <td>
@@ -64,9 +64,6 @@
                     @endforeach
                 </tbody>
               </table>
-              <div class="d-flex justify-content-center">
-                  {{ $gejala->links('pagination::simple-bootstrap-5') }}
-              </div>
               @include('components.admin_modal_gejala_edit')
           </div>
         </div>

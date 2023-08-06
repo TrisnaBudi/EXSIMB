@@ -6,10 +6,12 @@ use App\Http\Controllers\KerusakanController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\PerawatanController;
+use App\Http\Controllers\KeputusanController;
 use App\Models\Diagnosa;
 use App\Models\Kerusakan;
 use App\Models\KondisiUser;
 use App\Models\Gejala;
+use App\Models\Keputusan;
 use App\Models\Perawatan;
 use Illuminate\Support\Facades\Route;
 
@@ -59,6 +61,7 @@ Route::middleware('auth')->group(function () {
         
     Route::resource('/gejala', GejalaController::class); // CRUD Gejala
     Route::resource('/kerusakan', KerusakanController::class); // CRUD Kerusakan
+    Route::resource('/keputusan', KeputusanController::class);
     Route::resource('/spk', DiagnosaController::class)->only('index');
 
     Route::get('/spk/result/{diagnosa_id}', [DiagnosaController::class, 'diagnosaResult'])->name('spk.result'); // Menampilkan hasil diagnosa

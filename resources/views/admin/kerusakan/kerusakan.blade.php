@@ -36,7 +36,7 @@
             <table id="tabel-gejala" class="table table-bordered table-hover my-2">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Kode Kerusakan</th>
                     <th scope="col">Kerusakan</th>
                     <th scope="col">Solusi</th> <!-- Kolom Solusi ditambahkan di sini -->

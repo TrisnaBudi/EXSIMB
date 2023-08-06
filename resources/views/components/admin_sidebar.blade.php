@@ -29,6 +29,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link px-sm-0 px-2" href="{{ route('keputusan.index') }}">
+                    <i class="bi bi-clipboard-data-fill nav-icon"></i>
+                    <span class="ms-1 d-none d-sm-inline">Keputusan</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link px-sm-0 px-2" href="{{ route('spk.index') }}">
                     <i class="bi bi-bar-chart nav-icon"></i>
                     <span class="ms-1 d-none d-sm-inline">Diagnosa</span>

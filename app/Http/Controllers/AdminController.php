@@ -22,7 +22,8 @@ class AdminController extends Controller
         'gejala' => Gejala::all(),
         'kondisi_user' => KondisiUser::all(),
         'user' => User::all(),
-        'kerusakan' => Kerusakan::all()
+        'kerusakan' => Kerusakan::all(),
+        'keputusan' => Keputusan::all()
     ];
     return view('admin.dashboard', $data);
 }
